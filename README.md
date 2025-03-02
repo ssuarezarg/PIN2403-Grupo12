@@ -1,19 +1,25 @@
 # PIN2403-Grupo12
 
-#Pasos para el deploy
-##1. Clonación del repositorio
+# Pasos para el deploy
+
+## 1. Clonación del repositorio
+
 ```
 git clone https://github.com/ssuarezarg/PIN2403-Grupo12.git
 cd PIN2403-Grupo12
+
 ```
 Este paso descarga el código fuente del repositorio y se mueve al directorio del proyecto. Es la base para el resto de operaciones.
-##2. Instalación de Terraform
+
+## 2. Instalación de Terraform
+'''
 sudo apt update
 sudo apt install wget
 sudo apt install lsb-release
 wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install -y terraform
+'''
 
 Aquí se instala Terraform, una herramienta para infraestructura como código (IaC). El proceso incluye:
 Actualizar los repositorios
