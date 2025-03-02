@@ -23,11 +23,11 @@ sudo apt update && sudo apt install -y terraform
 ```
 
 Aquí se instala Terraform, una herramienta para infraestructura como código (IaC). El proceso incluye:
-Actualizar los repositorios
-Instalar dependencias (wget, lsb-release)
-Agregar la clave GPG de HashiCorp
-Configurar el repositorio oficial de HashiCorp
-Instalar Terraform
+1. Actualizar los repositorios
+2. Instalar dependencias (wget, lsb-release)
+3. Agregar la clave GPG de HashiCorp
+4. Configurar el repositorio oficial de HashiCorp
+5. Instalar Terraform
 
 ### 3. Instalación de MicroK8s
 
@@ -39,9 +39,9 @@ source ~/.bashrc
 ```
 
 Se instala MicroK8s, una versión ligera de Kubernetes para desarrollo local o entornos pequeños:
-Instala snapd (el gestor de paquetes para snaps)
-Instala MicroK8s con la opción '--classic'
-Agrega el directorio de snap al PATH
+1. Instala snapd (el gestor de paquetes para snaps)
+2. Instala MicroK8s con la opción '--classic'
+3. Agrega el directorio de snap al PATH
 
 ### 4. Configuración de permisos para MicroK8s
 
@@ -52,9 +52,9 @@ newgrp microk8s
 ```
 
 Estos comandos:
-Agregan el usuario actual al grupo 'microk8s'
-Asignan los permisos correctos para el directorio .kube
-Cambian al nuevo grupo sin necesidad de reiniciar la sesión
+1. Agregan el usuario actual al grupo 'microk8s'
+2. Asignan los permisos correctos para el directorio .kube
+3. Cambian al nuevo grupo sin necesidad de reiniciar la sesión
 
 ### 5. Habilitación de complementos de MicroK8s
 ```
@@ -62,10 +62,10 @@ microk8s enable dns storage ingress helm3
 ```
 
 Activa componentes esenciales:
-dns: resolución de nombres dentro del clúster
-storage: almacenamiento persistente
-ingress: controlador para exponer servicios al exterior
-helm3: gestor de paquetes para Kubernetes
+1. dns: resolución de nombres dentro del clúster
+2. storage: almacenamiento persistente
+3. ingress: controlador para exponer servicios al exterior
+4. helm3: gestor de paquetes para Kubernetes
 
 ### 6. Configuración de kubectl
 
@@ -77,9 +77,9 @@ source ~/.bashrc
 ```
 
 Configura la herramienta kubectl para interactuar con el clúster:
-Crea el directorio .kube si no existe
-Genera el archivo de configuración
-Crea un alias para simplificar comandos
+1. Crea el directorio .kube si no existe
+2. Genera el archivo de configuración
+3. Crea un alias para simplificar comandos
 
 ### 7. Despliegue con Terraform
 
@@ -90,9 +90,9 @@ terraform apply
 ```
 
 Inicializa y despliega la infraestructura definida en archivos Terraform:
-init: descarga plugins y módulos necesarios
-plan: muestra los cambios que se aplicarán
-apply: implementa los cambios
+1. init: descarga plugins y módulos necesarios
+2. plan: muestra los cambios que se aplicarán
+3. apply: implementa los cambios
 
 ### 8. Verificación del clúster
 
@@ -148,7 +148,7 @@ Aplica la configuración para que Prometheus monitoree el servicio Nginx.
 kubectl get secret -n monitoring prometheus-stack-grafana -o jsonpath="{.data.admin-password}" | base64 --decode
 ```
 
-##14. Validaciones
+### 14. Validaciones
 
 1. Probar Jenkins
 ```
