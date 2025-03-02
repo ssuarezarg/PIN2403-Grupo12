@@ -127,7 +127,7 @@ Despliega un servidor Nginx definido en el archivo yaml.
 ```
 microk8s helm3 repo add prometheus-community https://prometheus-community.github.io/helm-charts
 microk8s helm3 repo update
-microk8s helm3 upgrade prometheus-stack prometheus-community/kube-prometheus-stack -n monitoring -f monitoring-values.yaml
+microk8s helm3 install prometheus-stack prometheus-community/kube-prometheus-stack -n monitoring -f monitoring-values.yaml
 ```
 
 Configura herramientas de monitoreo:
