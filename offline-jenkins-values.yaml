@@ -3,5 +3,6 @@ controller:
     password: "P455W0RD"
   installPlugins: false
   serviceType: NodePort
+  nodePort: 32000
 persistence:
   storageClass: "microk8s-hostpath"
