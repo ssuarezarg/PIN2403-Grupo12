@@ -1,0 +1,6 @@
+controller:
+  admin:
+    password: "P455W0RD"
+  installPlugins: false
+persistence:
+  storageClass: "microk8s-hostpath"
