@@ -86,7 +86,7 @@ Configura la herramienta kubectl para interactuar con el clúster:
 ```
 terraform init
 terraform plan
-terraform apply
+terraform apply -auto-approve
 ```
 
 Inicializa y despliega la infraestructura definida en archivos Terraform:
@@ -101,6 +101,9 @@ kubectl get nodes
 ```
 Verifica que el clúster esté funcionando correctamente mostrando los nodos disponibles.
 
+
+
+## DESDE ACA NO VA
 ### 9. Instalación de Jenkins
 
 ```
